@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack --mode development ./leadmanager/frontend/src/index.js --output ./leadmanger/frontend/static/main.js",
+    "build": "webpack --mode production ./leadmanager/frontend/src/index.js --output ./leadmanger/frontend/static/main.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,19 @@
   "bugs": {
     "url": "https://github.com/Jonathanvanhaaften/react-skiprojet/issues"
   },
-  "homepage": "https://github.com/Jonathanvanhaaften/react-skiprojet#readme"
+  "homepage": "https://github.com/Jonathanvanhaaften/react-skiprojet#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.17",
+    "@babel/preset-env": "^7.12.17",
+    "@babel/preset-react": "^7.12.13",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "webpack": "^5.23.0",
+    "webpack-cli": "^4.5.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
 }
