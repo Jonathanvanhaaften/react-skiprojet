@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development ./leadmanager/frontend/src/index.js --output ./leadmanger/frontend/static/main.js",
-    "build": "webpack --mode production ./leadmanager/frontend/src/index.js --output ./leadmanger/frontend/static/main.js"
+    "dev": "webpack --mode development ./leadmanager/frontend/src/index.js --output-path ./leadmanager/frontend/static/frontend/",
+    "build": "webpack --mode production ./leadmanager/frontend/src/index.js --output ./leadmanger/frontend/static/"
   },
   "repository": {
     "type": "git",
