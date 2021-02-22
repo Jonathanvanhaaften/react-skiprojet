@@ -14,7 +14,7 @@ class App extends Component{
             <Fragment>
                 <Header />
                 <Dashboard />
-                <h1>This pp</h1>
+                <h1>This App</h1>
             </Fragment>
         </Provider>
         )
