@@ -7,7 +7,7 @@ export default function Dashboard() {
     return (
         <Fragment>
             <Form />
-            <Leads />
+            {/* <Leads /> */}
         </Fragment>
     )
 }
