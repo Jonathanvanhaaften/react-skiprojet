@@ -11,7 +11,7 @@ export class Form extends Component {
         post:''
     };
 
-      static PropTypes = {
+      static propTypes = {
         addLead: PropTypes.func.isRequired
       };
     onChange = e => this.setState({  [e.target.name]:
