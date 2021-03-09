@@ -15,10 +15,11 @@ export class Alerts extends Component {
         if(error !== prevProps.error){
             if(error.msg.name) alert.error(`Name: ${error.msg.name.join()}`);
             if(error.msg.email) alert.error(`Email: ${error.msg.email.join()}`);
-            if(error.msg.post) alert.error(`Email: ${error.msg.post.join()}`);
+            if(error.msg.message) alert.error(`Email: ${error.msg.message.join()}`);
         }
         if(message !== prevProps.message){
             if(message.deleteLead) alert.success(message.deleteLead);
+            if(message.addLead) alert.success(message.addLead);
         }
     };
     render() {
