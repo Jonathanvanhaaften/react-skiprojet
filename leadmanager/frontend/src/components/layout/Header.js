@@ -1,24 +1,35 @@
-import React, { Component } from 'react'
-
+import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 export class Header extends Component {
     render() {
         return (
             <nav className="navbar navbar-expand-sm navbar-light bg-light">
             <div className="container-fluid">
-              <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-              </button>
+            <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon" />
+          </button>
+              
               <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <a className="navbar-brand" href="#">BackYard Shed</a>
-                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                <a className="navbar-brand" href="#">
+                  BackYard Shed</a>
+                <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
                   <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="#">Home</a>
+                   <Link to="/register" className="nav-link">
+                     Register
+                     </Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">Link</a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">Disabled</a>
+                   <Link to="/Login" className="nav-link">
+                     Login
+                     </Link>
                   </li>
                 </ul>
                 
