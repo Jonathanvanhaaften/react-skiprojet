@@ -23,7 +23,7 @@ export class Header extends Component {
           </li>
       </ul>
     );
-    
+  
   
       const guestLinks = (
         <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
