@@ -1,5 +1,5 @@
 import { returnErrors } from "../actions/messages";
-import { USER_LOADED, USER_LOADING, AUTH_ERROR, LOGIN_FAIL,LOGIN_SUCCESS } from "../actions/types"
+import { USER_LOADED, USER_LOADING, AUTH_ERROR, LOGIN_FAIL,LOGIN_SUCCESS,LOGOUT_SUCCESS } from "../actions/types"
 import store from "../store";
 
 
@@ -36,6 +36,7 @@ export default function(state = initialState, action) {
         
         case AUTH_ERROR:
         case LOGIN_FAIL:
+        case LOGOUT_SUCCESS:
             localStorage.removeItem('token');
             return{
                 ...state,

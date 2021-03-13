@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { returnErrors } from './messages';
 
-import { USER_LOADED, USER_LOADING, AUTH_ERROR, LOGIN_SUCCESS, LOGIN_FAIL } from "./types"
+import { USER_LOADED, USER_LOADING, AUTH_ERROR, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT_SUCCESS } from "./types"
 
 // Cheak token & load user
 
@@ -73,3 +73,39 @@ export const login = (username, password) => dispatch =>   {
         });
     };
 // Logout user
+
+
+export const logout = () => (dispatch, getState) =>   {
+    // User Loading
+        dispatch({ type: USER_LOADING });
+    
+    // Get token from state
+    
+        const token = getState().auth.token;
+    
+    //Headers
+        const config = {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        };
+    
+    // chack for token then add it to header
+    
+        if(token) {
+            config.headers['Authorization'] = `Token ${token}`;
+        }
+    
+        axios
+            .post('/api/auth/logout/',null, config)
+            .then(res => {
+                dispatch({
+                    type: LOGOUT_SUCCESS,
+                    
+                });
+            }).catch(err => {
+                dispatch(returnErrors(err.response.data,
+                    err.response.status));
+        });
+    };
+    
