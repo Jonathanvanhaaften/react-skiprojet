@@ -1,5 +1,12 @@
 import { returnErrors } from "../actions/messages";
-import { USER_LOADED, USER_LOADING, AUTH_ERROR, LOGIN_FAIL,LOGIN_SUCCESS,LOGOUT_SUCCESS } from "../actions/types"
+import { USER_LOADED, 
+        USER_LOADING, 
+        AUTH_ERROR, 
+        LOGIN_FAIL,
+        LOGIN_SUCCESS,
+        LOGOUT_SUCCESS, 
+        REGISTER_SUCCESS, 
+        REGISTER_FAIL } from "../actions/types"
 import store from "../store";
 
 
@@ -25,6 +32,7 @@ export default function(state = initialState, action) {
                 user: action.payload
             }
         case LOGIN_SUCCESS:
+        case REGISTER_SUCCESS:
             localStorage.setItem('token',
             action.payload.token);
             return {
@@ -37,6 +45,7 @@ export default function(state = initialState, action) {
         case AUTH_ERROR:
         case LOGIN_FAIL:
         case LOGOUT_SUCCESS:
+        case REGISTER_FAIL:
             localStorage.removeItem('token');
             return{
                 ...state,

@@ -41,7 +41,6 @@ class App extends Component{
                             <Route exact path="/register" component={Register} />
                             <Route exact path="/login" component={Login} />
                         </Switch>
-                        <h1>This App</h1>
                     </Fragment>
                     </Router>
                 </AlertProvider>
