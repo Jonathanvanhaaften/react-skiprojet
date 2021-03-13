@@ -69,7 +69,7 @@ export const login = (username, password) => dispatch =>   {
 
 // Register user
 
-export const register = ({ username, password, email }) => dispatch =>   {
+export const register = ({ username, email, password }) => dispatch =>   {
     
     //Headers
         const config = {
